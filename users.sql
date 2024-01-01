@@ -1,0 +1,9 @@
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (10, 'native', 'test', 'test@test.com', 'uploads\\man2.jpg', '$2b$10$08BK7YYCAHBoHcEDpxgESuA.lp.vSsTBFbDavTYa92bwblkySUnMm');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (11, 'facebook', 'test2', 'test2@test.com', 'uploads\\man2.jpg', '$2b$10$EYTk/1HQ3yg2vtrMZvJdcuJrmZYKygbsKTT7R0c0XeXtrePgDnSHy');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (12, 'native', 'test3', 'test3@test.com', 'uploads/man2.jpg', '$2b$10$91QAM0ZFYX0GwTo.gbyp7.LR75qIoj4f2zTfwwt4UmUGDn.Bnr.6G');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (13, 'native', 'test4', 'test4@test.com', 'uploads/man2.jpg', '$2b$10$ZN1vB7Cagu1WQQYiMMBeme/sz86SPw4JkxHympX2KOy7tWtoiSJ42');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (14, 'facebook', 'test5', 'test5@test.com', 'uploads/man2.jpg', '$2b$10$8w83vvkOPg4/jD1FcMHoKeiIw0fO0BUW6PEW09bVZahM24AgYGioi');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (15, 'native', 'test6', 'test6@test.com', 'uploads/man2.jpg', '$2b$10$emnCOt1RaZzg/QmkyojUF.9Y6zGBt7e6btSDKYwYv5Znc/va51j9u');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (16, 'native', 'test1234', 'test1234@test.com', 'uploads/default.jpg', '$2b$10$9LdWY9nalVhJqUQ314hRGeIYdGT6aDxOkDezHKCdG7WuQvJopRqae');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (17, 'native', 'test1234', 'test12634@test.com', 'uploads/default.jpg', '$2b$10$ysAKQ8dy.yJLpE9Ns/kTheY7CkzMZLsmN6FbpJQyu9VuspJF75H8y');
+INSERT INTO stylish.users (id, provider, `name`, email, picture, `password`) VALUES (18, 'native', 'stylishtest', 'stylishtest_257b656e@test.com', 'uploads/default.jpg', '$2b$10$g6nexB3DFKArInfIRR5cTePhlX9a91DHtNgI8Uw9iPK3CzfECbwge');

@@ -1,0 +1,13 @@
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (1, 1, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (2, 1, 'M');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (3, 2, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (4, 2, 'M');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (5, 2, 'L');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (6, 3, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (7, 3, 'M');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (8, 7, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (9, 8, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (10, 4, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (11, 5, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (12, 6, 'S');
+INSERT INTO stylish.productSizes (id, product_id, size) VALUES (23, 9, 'F');

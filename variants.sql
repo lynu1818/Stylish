@@ -1,0 +1,14 @@
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (1, 1, '334455', 'S', 5);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (2, 1, '334455', 'M', 10);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (3, 1, 'FFFFFF', 'S', 0);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (4, 1, 'FFFFFF', 'M', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (5, 2, 'FFFFFF', 'S', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (6, 2, 'FFFFFF', 'M', 1);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (7, 2, 'FFFFFF', 'L', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (8, 7, 'FFFFFF', 'S', 3);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (9, 8, 'FFFFFF', 'S', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (10, 9, 'FFFFFF', 'F', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (11, 3, 'FFFFFF', 'S', 3);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (12, 4, 'FFFFFF', 'S', 2);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (13, 5, 'FFFFFF', 'S', 3);
+INSERT INTO stylish.variants (id, product_id, color_code, size, stock) VALUES (14, 6, 'FFFFFF', 'S', 1);

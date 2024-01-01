@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div id="totalRevenue"></div>
+    <script>
+        fetch('http://localhost:3000/api/1.0/order/total')
+            .then(response => response.json())
+            .then(data => {
+                const totalRevenue = data.total_revenue;
+                const totalRevenueDiv = document.getElementById('totalRevenue');
+                totalRevenueDiv.innerHTML = `<h1>Total Revenue: ${totalRevenue}</h1>`;
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+
+
+    <div id="salesByColor"></div>
+        <script>
+            fetch('http://localhost:3000/api/1.0/order/sales-by-color')
+                .then(response => response.json())
+                .then(data => {
+                    const values = data.map(item => item.total_sales);
+                    const colors = data.map(item => JSON.parse(item.color));
+                    const labels = colors.map(color => color.name)
+                    const colorCodes = colors.map(color => color.code);
+
+                    const plotData = [{
+                        values: values,
+                        labels: labels,
+                        type: 'pie',
+                        marker: {
+                            colors: colorCodes
+                        }
+                    }];
+
+                    const layout = {
+                        title: 'Product sold percentage in different colors',
+                        // Define layout settings
+                    };
+
+                    Plotly.newPlot('salesByColor', plotData, layout);
+                })
+                .catch(error => console.error('Error:', error));
+        </script>
+    <div id="salesByPriceRange"></div>
+    <script>
+        fetch('http://localhost:3000/api/1.0/order/sales-by-price-range')
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: ", data);
+                const xValues = data.map(item => item.price);
+                const yValues = data.map(item => item.total_sales);
+
+                const trace = {
+                    x: xValues,
+                    y: yValues,
+                    type: 'bar', // This specifies that we want a bar chart, which is used for histograms
+                };
+
+                const layout = {
+                    title: 'Product sold quantity in different price range',
+                    xaxis: {
+                        title: '',
+                    },
+                    yaxis: {
+                        title: 'Quantity',
+                    }
+                };
+
+                Plotly.newPlot('salesByPriceRange', [trace], layout);
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+    <div id="stackedBarChart"></div>
+    <script>
+        fetch('http://localhost:3000/api/1.0/order/top-products-by-size')
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: ", data);
+
+                let totalQuantities = data.reduce((acc, item) => {
+                    acc[item.product_id] = (acc[item.product_id] || 0) + parseInt(item.qty, 10);
+                    return acc;
+                }, {});
+
+                let sizes = ['L', 'M', 'S']; // Unique sizes
+
+                let top5Products = Object.keys(totalQuantities).sort((a, b) => totalQuantities[b] - totalQuantities[a]).slice(0, 5); // Top 5 products
+                const traces = sizes.map(size => {
+                    return {
+                        x: data.filter(item => item.size === size).map(item => `Product ${item.product_id}`),
+                        y: data.filter(item => item.size === size).map(item => parseInt(item.qty, 10)),
+                        name: size,
+                        type: 'bar'
+                    };
+                });
+
+                var layout = {
+                    title: 'Quantity of top 5 sold products in different sizes',
+                    barmode: 'stack',
+                    xaxis: { title: '' },
+                    yaxis: { title: 'Quantity' }
+                };
+
+                Plotly.newPlot('stackedBarChart', traces, layout);
+
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>

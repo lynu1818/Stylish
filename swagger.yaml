@@ -1,0 +1,147 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "product create API",
+    "description": "API to create products with images",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://3.104.139.41",
+      "description": "SwaggerHub API Auto Mocking"
+    }
+  ],
+  "paths": {
+    "/api/1.0/products/create": {
+      "post": {
+        "summary": "Create a product",
+        "operationId": "createProduct",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/products_create_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Product successfully created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request, no files uploaded"
+          },
+          "500": {
+            "description": "Internal server error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "products_create_body": {
+        "type": "object",
+        "properties": {
+          "main_image": {
+            "type": "string",
+            "description": "The main image for the product.",
+            "format": "binary"
+          },
+          "images": {
+            "type": "array",
+            "description": "Additional images for the product (up to 5).",
+            "items": {
+              "type": "string",
+              "format": "binary"
+            }
+          },
+          "id": {
+            "type": "integer"
+          },
+          "category": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "texture": {
+            "type": "string"
+          },
+          "wash": {
+            "type": "string"
+          },
+          "place": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "story": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "object",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "price": {
+                "type": "number"
+              },
+              "texture": {
+                "type": "string"
+              },
+              "wash": {
+                "type": "string"
+              },
+              "place": {
+                "type": "string"
+              },
+              "note": {
+                "type": "string"
+              },
+              "story": {
+                "type": "string"
+              },
+              "main_image": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

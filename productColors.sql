@@ -1,0 +1,11 @@
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (1, 2, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (2, 1, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (3, 1, '334455');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (4, 3, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (5, 3, 'FFDDDD');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (6, 7, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (7, 8, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (8, 9, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (9, 4, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (10, 5, 'FFFFFF');
+INSERT INTO stylish.productColors (id, product_id, color_code) VALUES (11, 6, 'FFFFFF');

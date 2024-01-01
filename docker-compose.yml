@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    image: "lynu369/stylish-app:latest"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./public/admin:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt:/etc/letsencrypt
+    ports:
+      - "80:80"
+      - "443:443"
+
+  redis:
+    image: redis:latest
